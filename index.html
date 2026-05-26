@@ -2,17 +2,20 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Jyoti Kashyap Portfolio</title>
+  <title>Jyoti kashyap Portfolio</title>
 
   <!-- Bootstrap CSS -->
+
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet">
 
   <!-- Font Awesome -->
+
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -52,14 +55,19 @@
 
     .hero{
       height:100vh;
-      background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+
+      background:
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
       url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+
       background-size:cover;
       background-position:center;
+
       display:flex;
       justify-content:center;
       align-items:center;
       text-align:center;
+
       color:white;
     }
 
@@ -69,14 +77,15 @@
     }
 
     .hero p{
-      font-size:22px;
+      font-size:24px;
+      margin-top:15px;
     }
 
     .btn-custom{
       background:#ffd700;
       color:black;
-      font-weight:bold;
       border:none;
+      font-weight:bold;
     }
 
     .btn-custom:hover{
@@ -115,6 +124,7 @@
       border-radius:10px;
       box-shadow:0 0 10px rgba(0,0,0,0.1);
       transition:0.3s;
+      height:100%;
     }
 
     .skill-card:hover{
@@ -122,7 +132,7 @@
     }
 
     .skill-card i{
-      font-size:40px;
+      font-size:45px;
       color:#0d6efd;
       margin-bottom:15px;
     }
@@ -168,6 +178,10 @@
       margin-bottom:15px;
     }
 
+    .project-content ul{
+      padding-left:20px;
+    }
+
     /* Contact */
 
     .contact-box{
@@ -175,6 +189,11 @@
       padding:40px;
       border-radius:10px;
       box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-info i{
+      color:#0d6efd;
+      margin-right:10px;
     }
 
     /* Footer */
@@ -187,6 +206,7 @@
     }
 
   </style>
+
 </head>
 
 <body>
@@ -197,7 +217,7 @@
 
     <div class="container">
 
-      <a class="navbar-brand" href="#">Jyoti Kashyap</a>
+      <a class="navbar-brand" href="#">Jyoti kashyap</a>
 
       <button
         class="navbar-toggler bg-light"
@@ -247,12 +267,15 @@
 
     <div>
 
-      <h1>Hello, I'm Jyoti Kashyap</h1>
+      <h1>Hello, I'm Jyoti kashyap</h1>
 
       <p>Aspiring Data Analyst</p>
 
-      <a href="#contact" class="btn btn-custom mt-3 px-4 py-2">
-        Contact Me
+      <a href="#contact"
+         class="btn btn-custom mt-3 px-4 py-2">
+
+         Contact Me
+
       </a>
 
     </div>
@@ -274,8 +297,8 @@
           <div class="about-box">
 
             <p>
-              Data Analyst with knowledge of Excel, SQL, Power BI, and data visualization techniques. 
-              Skilled in data cleaning, reporting, dashboard development, and extracting actionable insights from datasets.
+             Data Analyst with knowledge of Excel,Python(NumPy,Pandas and Matplotlib), SQL, Power BI, and data visualization techniques. 
+             Skilled in data cleaning, reporting, dashboard development, and extracting actionable insights from datasets.
             </p>
 
             <p>
@@ -303,6 +326,8 @@
 
       <div class="row g-4 justify-content-center">
 
+        <!-- Python -->
+
         <div class="col-md-3">
 
           <div class="skill-card">
@@ -314,6 +339,8 @@
           </div>
 
         </div>
+
+        <!-- SQL -->
 
         <div class="col-md-3">
 
@@ -327,6 +354,8 @@
 
         </div>
 
+        <!-- Excel -->
+
         <div class="col-md-3">
 
           <div class="skill-card">
@@ -339,6 +368,8 @@
 
         </div>
 
+        <!-- Power BI -->
+
         <div class="col-md-3">
 
           <div class="skill-card">
@@ -346,6 +377,48 @@
             <i class="fa-solid fa-chart-column"></i>
 
             <h4>Power BI</h4>
+
+          </div>
+
+        </div>
+
+        <!-- NumPy -->
+
+        <div class="col-md-3">
+
+          <div class="skill-card">
+
+            <i class="fa-brands fa-python"></i>
+
+            <h4>NumPy</h4>
+
+          </div>
+
+        </div>
+
+         <!-- Matplotlib -->
+
+        <div class="col-md-3">
+
+          <div class="skill-card">
+
+            <i class="fa-brands fa-python"></i>
+
+            <h4>Matplotlib</h4>
+
+          </div>
+
+        </div>
+
+        <!-- Pandas -->
+
+        <div class="col-md-3">
+
+          <div class="skill-card">
+
+            <i class="fa-brands fa-python"></i>
+
+            <h4>Pandas</h4>
 
           </div>
 
@@ -367,7 +440,7 @@
 
       <div class="edu-box">
 
-        <h4> MCA </h4>
+        <h4>MCA</h4>
 
         <p>Indira Gandhi University,Rewari,Haryana</p>
 
@@ -403,15 +476,15 @@
 
             <img
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-              alt="Sales Analysis">
+              alt="Car Sales Dashboard">
 
             <div class="project-content">
 
-              <h4>Sales Data Analysis</h4>
+              <h4>Car Sales Data Analysis</h4>
 
               <p>
-                Created Car sales reports and dashboards using Excel
-                for business insights and performance analysis.
+                Created interactive Excel dashboards and reports
+                for car sales analysis and business insights.
               </p>
 
             </div>
@@ -421,21 +494,22 @@
         </div>
 
         <!-- Project 2 -->
-       <div class="col-md-4">
+
+        <div class="col-md-4">
 
           <div class="project-card">
 
             <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
-              alt="Modern Dashboard">
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+              alt="Road Accident Dashboard">
 
             <div class="project-content">
 
               <h4>Road Accident Data Analysis</h4>
 
               <p>
-                Built a professional analytics dashboard using Excel and Power BI
-                to track accident trends, casualties, vehicle categories, and regional insights.
+                Analyzed road accident data using Excel and Power BI
+                to identify accident trends and risk areas.
               </p>
 
             </div>
@@ -452,15 +526,16 @@
 
             <img
               src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-              alt="Power BI Dashboard">
+              alt="SQL Analytics">
 
             <div class="project-content">
 
-              <h4>Power BI Dashboard</h4>
+              <h4>SQL Analytics Project</h4>
 
               <p>
-                Built interactive dashboards using Power BI
-                with KPIs, charts, filters, and slicers.
+                Performed advanced SQL queries using joins,
+                subqueries, and aggregate functions
+                for business data analysis.
               </p>
 
             </div>
@@ -470,6 +545,31 @@
         </div>
 
         <!-- Project 4 -->
+
+        <div class="col-md-4">
+
+          <div class="project-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+              alt="Python Analytics">
+
+            <div class="project-content">
+
+              <h4>Python Analytics Project</h4>
+
+              <p>
+                Used Python, Pandas, and NumPy libraries
+                for data cleaning, analysis, and visualization.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Project 5 -->
 
         <div class="col-md-4">
 
@@ -501,20 +601,76 @@
 
         </div>
 
+        <!-- Project 6 -->
+
+        <div class="col-md-4">
+
+          <div class="project-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978"
+              alt="Power BI Dashboard">
+
+            <div class="project-content">
+
+              <h4>Power BI Sales Dashboard</h4>
+
+              <p>
+                Designed an interactive Power BI dashboard
+                with KPIs, charts, slicers, and business insights.
+              </p>
+
+              <ul>
+                <li>Sales KPIs</li>
+                <li>Monthly Revenue Analysis</li>
+                <li>Top Products Analysis</li>
+                <li>Region-wise Sales Report</li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Project 7 -->
+
+        <div class="col-md-4">
+
+          <div class="project-card">
+
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692"
+              alt="Streamlit App">
+
+            <div class="project-content">
+
+              <h4>Streamlit Analytics App</h4>
+
+              <p>
+                Built an interactive Streamlit analytics app
+                for dashboard reporting and data visualization.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
 
   </section>
-  
-        
+
   <!-- Contact Section -->
 
   <section id="contact">
 
     <div class="container">
 
-      <h2 class="section-title">Contact</h2>
+      <h2 class="section-title">Contact Me</h2>
 
       <div class="row justify-content-center">
 
@@ -564,6 +720,31 @@
 
             </form>
 
+            <!-- Contact Information -->
+
+            <hr class="my-4">
+
+            <div class="contact-info">
+
+              <h4 class="mb-3">Contact Information</h4>
+
+              <p>
+                <i class="fa-solid fa-envelope"></i>
+                Email: sharmajyt0311@gmail.com
+              </p>
+
+              <p>
+                <i class="fa-solid fa-phone"></i>
+                Phone: 9350425542
+              </p>
+
+              <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Location: Rewari, Haryana, India
+              </p>
+
+            </div>
+
           </div>
 
         </div>
@@ -579,7 +760,7 @@
   <footer>
 
     <p>
-      © 2026 Jyoti Kashyap Portfolio | All Rights Reserved
+      © 2026 Jyoti kashyap Portfolio | All Rights Reserved
     </p>
 
   </footer>
