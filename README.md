@@ -10,5 +10,9 @@ Github Link :- ![HR Analytics Dashboard]((https://github.com/jyotisharma-cyber/H
 Github Link :- ![Super Store Sales Dashboard]((https://github.com/jyotisharma-cyber/Power-Bi-Project-Sales))
 
 ---
+## Coaching-Institute-Dashboard 
 
+Github Link :- ![Coaching Institute Dashboard]((https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard))
+
+---
 
