@@ -38,12 +38,12 @@
     /* Navbar */
 
     .navbar{
-      background:#0d6efd;
+      background:#f8aedc;
     }
 
     .navbar-brand,
     .nav-link{
-      color:white !important;
+      color:rgb(2, 0, 0) !important;
       font-weight:500;
     }
 
@@ -89,8 +89,8 @@
     }
 
     .btn-custom:hover{
-      background:white;
-      color:#0d6efd;
+      background:rgb(3, 11, 15);
+      color:#03f8f8;
     }
 
     /* Sections */
@@ -102,52 +102,137 @@
     .section-title{
       text-align:center;
       margin-bottom:50px;
-      color:#0d6efd;
+      color:#0d0d0e;
       font-weight:bold;
     }
 
     /* About */
 
     .about-box{
-      background:white;
+      background:rgb(255, 248, 146);
       padding:30px;
       border-radius:10px;
       box-shadow:0 0 10px rgba(0,0,0,0.1);
     }
 
     /* Skills */
+        .skill-card{
+            padding:25px;
+            text-align:center;
+            border-radius:10px;
+            box-shadow:0 0px 10px rgba(0,0,0,0.1);
+            transition:0.3s;
+            color:rgb(71, 5, 253);
+            height:100%;
+        }
 
-    .skill-card{
-      background:white;
-      padding:25px;
-      text-align:center;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
-      transition:0.3s;
-      height:100%;
-    }
+        .skill-card:hover{
+            transform:translateY(-10px) ;
+        }
 
-    .skill-card:hover{
-      transform:translateY(-10px);
-    }
+        .skill-card i{
+          font-size:40px;
+          width:80px;
+          height:80px;
+          line-height:80px;
+          border-radius:50%;
+          margin-bottom:15px;
+          background:white;
+        }
 
-    .skill-card i{
-      font-size:45px;
-      color:#0d6efd;
-      margin-bottom:15px;
-    }
+/* Icon Circle Colors */
+
+        .powerbi-icon{
+          color:#771feb;
+        }
+
+        .excel-icon{
+          color:#08f773;
+        }
+
+        .mysql-icon{
+          color:#fc7b69;
+        }
+
+        .python-icon{
+          color:#3b0692;
+        }
+
+        .numpy-icon{
+          color:#a1e405;
+        }
+
+        .pandas-icon{
+          color:#f70000;
+        }
+
+        .matplotlib-icon{
+          color:#015229;
+        }
+/* Individual Skill Backgrounds */
+
+        .powerbi{
+            background:linear-gradient(135deg,#ff1504,#ff1504);
+        }
+
+        .excel{
+            background:linear-gradient(135deg,#107C41,#107C41);
+        }
+
+        .mysql{
+            background:linear-gradient(135deg,#f7d202,#f7d202);
+        }
+
+        .python{
+            background:linear-gradient(135deg,#F97316,#F97316);
+        }
+
+        .numpy{
+            background:linear-gradient(135deg,#f10574,#f598cb);
+        }
+
+        .pandas{
+            background:linear-gradient(135deg,#150458,#150458);
+        }
+
+        .matplotlib{
+            background:linear-gradient(135deg,#82faf4,#f065aa);
+        }
+
 
     /* Education */
 
     .edu-box{
-      background:white;
       padding:25px;
-      border-left:5px solid #0d6efd;
+      border-left:5px solid #080808;
       margin-bottom:20px;
       border-radius:10px;
       box-shadow:0 0 10px rgba(0,0,0,0.1);
+      color:rgb(2, 2, 2);
+      transition: 0.3s;
     }
 
+    .edu-box:hover{
+      transform:translateY(-10px);
+    }
+
+
+/* Different Education Colors */
+
+/* MCA */
+  .mca{
+    background:linear-gradient(135deg,#f7c67e,#e4bc38);
+  }
+
+/* B.Sc Computer Science */
+  .bsc-cs{
+    background:linear-gradient(135deg,#9333EA,#C084FC);
+  }
+
+/* Data Analyst */
+  .data-analyst{
+    background:linear-gradient(135deg,#fc9cd7,#f768cc,#ff0cb6);
+  } 
     /* Projects */
 
     .project-card{
@@ -199,8 +284,8 @@
     /* Footer */
 
     footer{
-      background:#0d6efd;
-      color:white;
+      background:#f8aedc;
+      color:rgb(14, 12, 12);
       text-align:center;
       padding:20px;
     }
@@ -329,118 +414,63 @@
 
   <!-- Skills Section -->
 
-  <section id="skills">
+    <section id="skills">
 
-    <div class="container">
+        <div class="container">
 
-      <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">Skills</h2>
 
-      <div class="row g-4 justify-content-center">
-
-        <!-- Power BI -->
-
-        <div class="col-md-3">
-
-          <div class="skill-card">
-
-            <i class="fa-solid fa-chart-column"></i>
-
+            <div class="row g-4 justify-content-center"> 
+                
+                
+    <div class="col-md-3">
+        <div class="skill-card powerbi">
+            <i class="fas fa-chart-bar powerbi-icon"></i>
             <h4>Power BI</h4>
-
-          </div>
-
         </div>
-
-        <!-- SQL -->
-
-        <div class="col-md-3">
-
-          <div class="skill-card">
-
-            <i class="fa-solid fa-database"></i>
-
-            <h4>SQL</h4>
-
-          </div>
-
-        </div>
-
-        <!-- Excel -->
-
-        <div class="col-md-3">
-
-          <div class="skill-card">
-
-            <i class="fa-solid fa-file-excel"></i>
-
-            <h4>Excel</h4>
-
-          </div>
-
-        </div>
-
-        <!-- Python -->
-
-        <div class="col-md-3">
-
-          <div class="skill-card">
-
-            <i class="fa-brands fa-python"></i>
-
-            <h4>Python</h4>
-
-          </div>
-
-        </div>
-
-        <!-- NumPy -->
-
-        <div class="col-md-3">
-
-          <div class="skill-card">
-
-            <i class="fa-brands fa-python"></i>
-
-            <h4>NumPy</h4>
-
-          </div>
-
-        </div>
-
-         <!-- Matplotlib -->
-
-        <div class="col-md-3">
-
-          <div class="skill-card">
-
-            <i class="fa-brands fa-python"></i>
-
-            <h4>Matplotlib</h4>
-
-          </div>
-
-        </div>
-
-        <!-- Pandas -->
-
-        <div class="col-md-3">
-
-          <div class="skill-card">
-
-            <i class="fa-brands fa-python"></i>
-
-            <h4>Pandas</h4>
-
-          </div>
-
-        </div>
-
-      </div>
-
     </div>
 
-  </section>
+    <div class="col-md-3">
+        <div class="skill-card mysql mysql-icon">
+            <i class="fas fa-database"></i>
+            <h4>MySQL</h4>
+        </div>
+    </div>
 
+    <div class="col-md-3">
+        <div class="skill-card excel excel-icon">
+            <i class="fas fa-file-excel"></i>
+            <h4>Excel</h4>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="skill-card python python-icon">
+            <i class="fab fa-python"></i>
+            <h4>Python</h4>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="skill-card numpy numpy-icon">
+            <i class="fab fa-python"></i>
+            <h4>NumPy</h4>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="skill-card matplotlib matplotlib-icon">
+            <i class="fab fa-python"></i>
+            <h4>Matplotlib</h4>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="skill-card pandas pandas-icon">
+            <i class="fab fa-python"></i>
+            <h4>Pandas</h4>
+        </div>
+    </div>
   <!-- Education Section -->
 
   <section id="education">
@@ -449,20 +479,22 @@
 
       <h2 class="section-title">Education</h2>
 
-      <div class="edu-box">
-
-        <h4>MCA</h4>
-
-        <p>Indira Gandhi University,Rewari,Haryana</p>
-
+      <div class="edu-box mca">
+        <h4>Master of Computer Applications (MCA)</h4>
+         <p>University Name :- Indira Gandhi University,Rewari,Haryana </p>
+         <p>Session :- 2023 - 2025 </p>
       </div>
 
-      <div class="edu-box">
-
-        <h4>B.Sc(Computer Science)</h4>
-
-        <p>Indira Gandhi University,Rewari,Haryana</p>
-
+      <div class="edu-box bsc-cs">
+        <h4>B.Sc Computer Science</h4>
+        <p>College Name :- GCW Gurawara,Rewari,Haryana </p>
+        <p>University Name :- Indira Gandhi University,Rewari,Haryana </p>
+        <p>Session :- 2018 - 2021</p>
+      </div>
+      <div class="edu-box data-analyst">
+        <h4>Data Analyst</h4>
+        <p>Institute Name :- Zillionsoftech,Rewari,Haryana </p>
+        <p>Year :- 2026 </p>
       </div>
 
     </div>
@@ -624,10 +656,12 @@
 
             <div class="project-content">
 
-              <h4 class="mb-3">Power BI Sales Dashboard</h4>
+            <h4 class="mb-3">Power BI Sales Dashboard</h4>
+               
 <a href="https://github.com/jyotisharma-cyber/Power-Bi-Project-Sales"
    target="_blank"
    class="btn btn-primary">
+  
    View Project
 
 </a>
@@ -687,7 +721,8 @@
 
             <div class="project-content">
 
-              <h4 class="mb-3">HR Analytics Dashboard</h4>
+            <h4 class="mb-3">HR Analytics Dashboard</h4>
+              
 <a href="https://github.com/jyotisharma-cyber/HR-ANALYTICS"
    target="_blank"
    class="btn btn-primary">
@@ -779,7 +814,7 @@
 
             <div class="project-content">
 
-              <h4 class=""mb-3>Coaching Institute Dashboard</h4>
+            <h4 class=""mb-3>Coaching Institute Dashboard</h4>
 <a href="https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard"
    target="_blank"
    class="btn btn-primary">
