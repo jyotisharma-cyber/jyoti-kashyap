@@ -2,739 +2,520 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Jyoti kashyap Portfolio</title>
 
-  <!-- Bootstrap CSS -->
-
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet">
-
-  <!-- Font Awesome -->
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      scroll-behavior:smooth;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    body{
-      font-family:Arial, sans-serif;
-      background:#f4f7fc;
-      color:#333;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7fc;
+      color: #333;
     }
 
     /* Navbar */
-
-    .navbar{
-      background:#f8aedc;
+    .navbar {
+      background: #f8aedc;
     }
 
     .navbar-brand,
-    .nav-link{
-      color:rgb(2, 0, 0) !important;
-      font-weight:500;
+    .nav-link {
+      color: rgb(2, 0, 0) !important;
+      font-weight: 500;
     }
 
-    .nav-link:hover{
-      color:#ffd700 !important;
+    .nav-link:hover {
+      color: #ffd700 !important;
     }
 
     /* Hero Section */
-
-    .hero{
-      height:100vh;
-
-      background:
-      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-      url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
-
-      background-size:cover;
-      background-position:center;
-
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-
-      color:white;
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
     }
 
-    .hero h1{
-      font-size:60px;
-      font-weight:bold;
+    .hero h1 {
+      font-size: 60px;
+      font-weight: bold;
     }
 
-    .hero p{
-      font-size:24px;
-      margin-top:15px;
+    .hero p {
+      font-size: 24px;
+      margin-top: 15px;
     }
 
-    .btn-custom{
-      background:#ffd700;
-      color:black;
-      border:none;
-      font-weight:bold;
+    .btn-custom {
+      background: #ffd700;
+      color: black;
+      border: none;
+      font-weight: bold;
     }
 
-    .btn-custom:hover{
-      background:rgb(3, 11, 15);
-      color:#03f8f8;
+    .btn-custom:hover {
+      background: rgb(3, 11, 15);
+      color: #03f8f8;
     }
 
     /* Sections */
-
-    section{
-      padding:80px 0;
+    section {
+      padding: 80px 0;
     }
 
-    .section-title{
-      text-align:center;
-      margin-bottom:50px;
-      color:#0d0d0e;
-      font-weight:bold;
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #0d0d0e;
+      font-weight: bold;
     }
 
     /* About */
-
-    .about-box{
-      background:rgb(255, 248, 146);
-      padding:30px;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    .about-box {
+      background: rgb(247, 242, 171);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    /* Skills */
-        .skill-card{
-            padding:25px;
-            text-align:center;
-            border-radius:10px;
-            box-shadow:0 0px 10px rgba(0,0,0,0.1);
-            transition:0.3s;
-            color:rgb(71, 5, 253);
-            height:100%;
-        }
+    /* 1. Skill Cards Light Tints */
+    .skill-card {
+      padding: 30px 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: 0.3s ease-in-out;
+      height: 100%;
+      border-top: 5px solid #333;
+    }
 
-        .skill-card:hover{
-            transform:translateY(-10px) ;
-        }
+    .skill-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+    }
 
-        .skill-card i{
-          font-size:40px;
-          width:80px;
-          height:80px;
-          line-height:80px;
-          border-radius:50%;
-          margin-bottom:15px;
-          background:white;
-        }
+    .powerbi-pillar { background-color: #fefae6; border-top-color: #F2C811; }
+    .powerbi-pillar i { color: #F2C811; }
 
-/* Icon Circle Colors */
+    .excel-pillar { background-color: #eaf7ed; border-top-color: #107C41; }
+    .excel-pillar i { color: #107C41; }
+    
+    .sql-pillar { background-color: #e6f4f8; border-top-color: #f7b7ee; }
+    .sql-pillar i { color: #f7b7ee; }
+    
+    .python-pillar { background-color: #eaf1f7; border-top-color: #3776AB; }
+    .python-pillar i { color: #3776AB; }
 
-        .powerbi-icon{
-          color:#771feb;
-        }
+    .skill-card i {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
 
-        .excel-icon{
-          color:#08f773;
-        }
+    .skill-card h4 {
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
 
-        .mysql-icon{
-          color:#fc7b69;
-        }
+    .skill-card ul {
+      text-align: left;
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
 
-        .python-icon{
-          color:#3b0692;
-        }
+    .skill-card ul li {
+      margin-bottom: 8px;
+      color: #444;
+    }
 
-        .numpy-icon{
-          color:#a1e405;
-        }
+    /* AI Tools Section Background styling */
+    #ai-tools {
+      background: #fafcff;
+    }
 
-        .pandas-icon{
-          color:#f70000;
-        }
-
-        .matplotlib-icon{
-          color:#015229;
-        }
-/* Individual Skill Backgrounds */
-
-        .powerbi{
-            background:linear-gradient(135deg,#ff1504,#ff1504);
-        }
-
-        .excel{
-            background:linear-gradient(135deg,#107C41,#107C41);
-        }
-
-        .mysql{
-            background:linear-gradient(135deg,#f7d202,#f7d202);
-        }
-
-        .python{
-            background:linear-gradient(135deg,#F97316,#F97316);
-        }
-
-        .numpy{
-            background:linear-gradient(135deg,#f10574,#f598cb);
-        }
-
-        .pandas{
-            background:linear-gradient(135deg,#150458,#150458);
-        }
-
-        .matplotlib{
-            background:linear-gradient(135deg,#82faf4,#f065aa);
-        }
-
-
-    /* Education */
-
-    .edu-box{
-      padding:25px;
-      border-left:5px solid #080808;
-      margin-bottom:20px;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
-      color:rgb(2, 2, 2);
+    /* 2. Education Cards Light Tints */
+    .edu-box {
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      color: rgb(2, 2, 2);
       transition: 0.3s;
     }
 
-    .edu-box:hover{
-      transform:translateY(-10px);
+    .edu-box:hover {
+      transform: translateY(-10px);
     }
 
+    .mca { background: linear-gradient(135deg, #fef5e7, #fdf0cd); border-left: 5px solid #fc7201; }
+    .bsc-cs { background: linear-gradient(135deg, #f5eefb, #ebdcf7); border-left: 5px solid #4604fc; }
+    .data-analyst { background: linear-gradient(135deg, #fef0f9, #fde2f4); border-left: 5px solid #fd038d; }
 
-/* Different Education Colors */
-
-/* MCA */
-  .mca{
-    background:linear-gradient(135deg,#f7c67e,#e4bc38);
-  }
-
-/* B.Sc Computer Science */
-  .bsc-cs{
-    background:linear-gradient(135deg,#9333EA,#C084FC);
-  }
-
-/* Data Analyst */
-  .data-analyst{
-    background:linear-gradient(135deg,#fc9cd7,#f768cc,#ff0cb6);
-  } 
-    /* Projects */
-
-    .project-card{
-      background:white;
-      border-radius:10px;
-      overflow:hidden;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
-      transition:0.3s;
-      height:100%;
+    /* 3. Project Cards Light Tint Style Setup */
+    .project-card {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: 0.3s ease-in-out;
+      height: 100%;
     }
 
-    .project-card:hover{
-      transform:scale(1.03);
+    .project-card:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      filter: brightness(0.97);
     }
 
-    .project-card img{
-      width:100%;
-      height:220px;
-      object-fit:cover;
+    .project-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
     }
 
-    .project-content{
-      padding:20px;
+    .project-content {
+      padding: 20px;
     }
 
-    .project-content h4{
-      color:#0d6efd;
-      margin-bottom:15px;
+    .project-content h4 {
+      color: #0d6efd;
+      margin-bottom: 15px;
     }
 
-    .project-content ul{
-      padding-left:20px;
+    .project-content ul {
+      padding-left: 20px;
     }
 
-    /* Contact */
+    /* Individual Projects Colors & Borders */
+    .p-car-sales { background: linear-gradient(135deg, #e0f2fe, #bae6fd); border-left: 5px solid #0284c7; }
+    .p-road-accident { background: linear-gradient(135deg, #ffedd5, #fed7aa); border-left: 5px solid #f97316; }
+    .p-sql-analytics { background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-left: 5px solid #22c55e; }
+    .p-python-analytics { background: linear-gradient(135deg, #fef9c3, #fef08a); border-left: 5px solid #eab308; }
+    .p-student-system { background: linear-gradient(135deg, #faf5ff, #f3e8ff); border-left: 5px solid #a855f7; }
+    .p-powerbi-sales { background: linear-gradient(135deg, #edf2f7, #e2e8f0); border-left: 5px solid #4a5568; }
+    .p-streamlit-app { background: linear-gradient(135deg, #fff1f2, #ffe4e6); border-left: 5px solid #f43f5e; }
+    .p-hr-analytics { background: linear-gradient(135deg, #f0fdfa, #ccfbf1); border-left: 5px solid #0d9488; }
+    .p-finance-dashboard { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-left: 5px solid #2563eb; }
+    .p-ecommerce-dashboard { background: linear-gradient(135deg, #fdf2f8, #fce7f3); border-left: 5px solid #db2777; }
+    .p-coaching-dashboard { background: linear-gradient(135deg, #f5f5f4, #e7e5e4); border-left: 5px solid #57534e; }
 
-    .contact-box{
-      background:white;
-      padding:40px;
-      border-radius:10px;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    /* 4. Contact Box Light Tint Style Setup */
+    .contact-box {
+      background: linear-gradient(135deg, #f0fdf4, #e6fbf0); 
+      border-left: 5px solid #10b981;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     }
 
-    .contact-info i{
-      color:#0d6efd;
-      margin-right:10px;
+    .contact-box .form-control {
+      background-color: #ffffff;
+    }
+
+    .contact-info i {
+      color: #10b981;
+      margin-right: 10px;
     }
 
     /* Footer */
-
-    footer{
-      background:#f8aedc;
-      color:rgb(14, 12, 12);
-      text-align:center;
-      padding:20px;
+    footer {
+      background: #f8aedc;
+      color: rgb(14, 12, 12);
+      text-align: center;
+      padding: 20px;
+      width: 100%;
     }
-
   </style>
-
 </head>
 
 <body>
-
-  <!-- Navbar -->
-
+<!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
-
     <div class="container">
-
       <a class="navbar-brand" href="#">Jyoti kashyap</a>
-
-      <button
-        class="navbar-toggler bg-light"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav">
-
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
-
       </button>
-
       <div class="collapse navbar-collapse" id="navbarNav">
-
         <ul class="navbar-nav ms-auto">
-
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#education">Education</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
-
       </div>
-
     </div>
-
   </nav>
 
-  <!-- Hero Section -->
-
   <section class="hero">
-
     <div>
-
       <h1>Hello, I'm Jyoti kashyap</h1>
-
       <p>Aspiring Data Analyst</p>
-      <a href="#projects"  
-         class="btn btn-custom mt-3 px-4 py-2">
-
-         View Projects
-      </a>
-
-      <a href="Jyoti_Kashyap_Modern_Resume.docx" 
-         class="btn btn-custom mt-3 px-4 py-2">
-         
-         Download Resume
-      </a>
-
-      <a href="#contact"
-         class="btn btn-custom mt-3 px-4 py-2">
-
-         Contact Me
-
-      </a>
-
+      <a href="#projects" class="btn btn-custom mt-3 px-4 py-2">View Projects</a>
+      <a href="Jyoti_Kashyap_Modern_Resume.docx" class="btn btn-custom mt-3 px-4 py-2">Download Resume</a>
+      <a href="#contact" class="btn btn-custom mt-3 px-4 py-2">Contact Me</a>
     </div>
-
   </section>
-
-  <!-- About Section -->
-
+<!-- ABOUT ME -->
   <section id="about">
-
     <div class="container">
-
       <h2 class="section-title">About Me</h2>
-
       <div class="row justify-content-center">
-
         <div class="col-md-8">
-
           <div class="about-box">
-
             <p>
-             Data Analyst with knowledge of Excel,Python(NumPy,Pandas and Matplotlib), SQL, Power BI, and data visualization techniques. 
-             Skilled in data cleaning, reporting, dashboard development, and extracting actionable insights from datasets.
+              Data Analyst with knowledge of Excel, Python (NumPy, Pandas, and Matplotlib), SQL, Power BI, and data visualization techniques. 
+              Skilled in data cleaning, reporting, dashboard development, and extracting actionable insights from datasets.
             </p>
-
             <p>
-              Passionate about analytics, business intelligence, 
-              and continuous learning with the goal of helping organizations make data-driven decisions.
+              Passionate about analytics, business intelligence, and continuous learning with the goal of helping organizations make data-driven decisions.
             </p>
-
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="row g-4 justify-content-center">
 
+        <!-- Power BI -->
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card powerbi-pillar">
+            <div class="text-center">
+              <i class="fas fa-chart-bar"></i>
+              <h4>1. POWER BI</h4>
+            </div>
+            <ul>
+              <li>Data Modelling</li>
+              <li>DAX</li>
+              <li>Interactive Dashboards</li>
+              <li>Business Reporting</li>
+              <li>KPI Design</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- EXCEL -->
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card excel-pillar">
+            <div class="text-center">
+              <i class="fas fa-file-excel"></i>
+              <h4>2. EXCEL</h4>
+            </div>
+            <ul>
+              <li>Excel Fundamentals</li>
+              <li>Lookup Functions (VLOOKUP, XLOOKUP)</li>
+              <li>Pivot Tables</li>
+              <li>Dashboards</li>
+              <li>Data Cleaning</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- MY SQL -->
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card sql-pillar">
+            <div class="text-center">
+              <i class="fas fa-database"></i>
+              <h4>3. MY SQL</h4>
+            </div>
+            <ul>
+              <li>Database Concepts</li>
+              <li>CRUD Operations</li>
+              <li>Joins</li>
+              <li>Aggregate Functions</li>
+              <li>Subqueries</li>
+              <li>Real-world Analytics Queries</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- PYTHON -->
+        <div class="col-md-6 col-lg-3">
+          <div class="skill-card python-pillar">
+            <div class="text-center">
+              <i class="fab fa-python"></i>
+              <h4>4. PYTHON</h4>
+            </div>
+            <ul>
+              <li>Python Basics</li>
+              <li>NumPy</li>
+              <li>Pandas</li>
+              <li>Data Cleaning</li>
+              <li>Data Analytics</li>
+              <li>Data Visualization (Matplotlib, Seaborn)</li>
+            </ul>
+          </div>
         </div>
 
       </div>
-
     </div>
+  </section>
+<!-- AI TOOLS -->
+  <section id="ai-tools">
+    <div class="container">
+      <h2 class="section-title">AI Tools</h2>
+      <div class="row g-4 justify-content-center">
 
+        <!-- CHATGPT -->
+        <div class="col-md-3">
+          <div class="skill-card" style="background:#fef3c7; border-top:5px solid #f59e0b; color:#f59e0b;">
+            <i class="fas fa-robot" style="color:#f59e0b; background: white;"></i>
+            <h4 style="color:#f59e0b;">ChatGPT</h4>
+            <ul>
+              <li>Data Analysis</li>
+              <li>SQL Queries</li>
+              <li>Python Coding</li>
+              <li>Report Writing</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- GOOGLE GEMINI -->
+        <div class="col-md-3">
+          <div class="skill-card" style="background:#ecfdf5; border-top:5px solid #10b981; color:#10b981;">
+            <i class="fas fa-brain" style="color:#10b981; background: white;"></i>
+            <h4 style="color:#10b981;">Google Gemini</h4>
+            <ul>
+              <li>Data Insights</li>
+              <li>Research</li>
+              <li>Visualization Ideas</li>
+              <li>Business Analytics</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- MICROSOFT COPILOT -->
+        <div class="col-md-3">
+          <div class="skill-card" style="background:#eff6ff; border-top:5px solid #3b82f6; color:#3b82f6;">
+            <i class="fas fa-microchip" style="color:#3b82f6; background: white;"></i>
+            <h4 style="color:#3b82f6;">Microsoft Copilot</h4>
+            <ul>
+              <li>Excel Automation</li>
+              <li>Power BI Support</li>
+              <li>DAX Assistance</li>
+              <li>Data Cleaning</li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- CLAUDE AI -->
+        <div class="col-md-3">
+          <div class="skill-card" style="background:#fdf2f8; border-top:5px solid #ec4899; color:#ec4899;">
+            <i class="fas fa-wand-magic-sparkles" style="color:#ec4899; background: white;"></i>
+            <h4 style="color:#ec4899;">Claude AI</h4>
+            <ul>
+              <li>Documentation</li>
+              <li>Data Interpretation</li>
+              <li>Business Reports</li>
+              <li>Analytics Support</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-  <!-- Skills Section -->
-
-    <section id="skills">
-
-        <div class="container">
-
-            <h2 class="section-title">Skills</h2>
-
-            <div class="row g-4 justify-content-center"> 
-                
-                
-    <div class="col-md-3">
-        <div class="skill-card powerbi">
-            <i class="fas fa-chart-bar powerbi-icon"></i>
-            <h4>Power BI</h4>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="skill-card mysql mysql-icon">
-            <i class="fas fa-database"></i>
-            <h4>MySQL</h4>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="skill-card excel excel-icon">
-            <i class="fas fa-file-excel"></i>
-            <h4>Excel</h4>
-        </div>
-    </div>
-
-    <div class="col-md-3">
-        <div class="skill-card python python-icon">
-            <i class="fab fa-python"></i>
-            <h4>Python</h4>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="skill-card numpy numpy-icon">
-            <i class="fab fa-python"></i>
-            <h4>NumPy</h4>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="skill-card matplotlib matplotlib-icon">
-            <i class="fab fa-python"></i>
-            <h4>Matplotlib</h4>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="skill-card pandas pandas-icon">
-            <i class="fab fa-python"></i>
-            <h4>Pandas</h4>
-        </div>
-    </div>
-  <!-- Education Section -->
-
+<!-- EDUCATION -->
   <section id="education">
-
     <div class="container">
-
       <h2 class="section-title">Education</h2>
 
+      <!-- MCA -->
       <div class="edu-box mca">
         <h4>Master of Computer Applications (MCA)</h4>
-         <p>University Name :- Indira Gandhi University,Rewari,Haryana </p>
-         <p>Session :- 2023 - 2025 </p>
+        <p>University Name :- Indira Gandhi University,Rewari,Haryana </p>
+        <p>Session :- 2023 - 2025 </p>
       </div>
 
+      <!-- BSC -->
       <div class="edu-box bsc-cs">
         <h4>B.Sc Computer Science</h4>
         <p>College Name :- GCW Gurawara,Rewari,Haryana </p>
         <p>University Name :- Indira Gandhi University,Rewari,Haryana </p>
         <p>Session :- 2018 - 2021</p>
       </div>
+
+      <!-- CERTIFICATE -->
       <div class="edu-box data-analyst">
         <h4>Data Analyst</h4>
         <p>Institute Name :- Zillionsoftech,Rewari,Haryana </p>
         <p>Year :- 2026 </p>
       </div>
-
     </div>
-
   </section>
 
-  <!-- Projects Section -->
-
+<!-- Projects -->
   <section id="projects">
-
     <div class="container">
-
       <h2 class="section-title">Projects</h2>
-
       <div class="row g-4">
 
-        <!-- Project 1 -->
-
+        <!-- CAR SALES -->
         <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
-              alt="Car Sales Dashboard">
-
+          <div class="project-card p-car-sales">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Car Sales Dashboard">
             <div class="project-content">
-
               <h4>Car Sales Data Analysis</h4>
-
-              <p>
-                Created interactive Excel dashboards and reports
-                for car sales analysis and business insights.
-              </p>
-
+              <p>Created interactive Excel dashboards and reports for car sales analysis and business insights.</p>
             </div>
-
           </div>
-
         </div>
 
-        <!-- Project 2 -->
-
+        <!-- ROAD ACCIDENT -->
         <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
-              alt="Road Accident Dashboard">
-
+          <div class="project-card p-road-accident">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Road Accident Dashboard">
             <div class="project-content">
-
               <h4>Road Accident Data Analysis</h4>
-
-              <p>
-                Analyzed road accident data using Excel and Power BI
-                to identify accident trends and risk areas.
-              </p>
-
+              <p>Analyzed road accident data using Excel and Power BI to identify accident trends and risk areas.</p>
             </div>
-
           </div>
-
         </div>
 
-        <!-- Project 3 -->
-
+        <!-- POWER BI SALES -->
         <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
-              alt="SQL Analytics">
-
+          <div class="project-card p-powerbi-sales">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Power BI Dashboard">
             <div class="project-content">
-
-              <h4>SQL Analytics Project</h4>
-
-              <p>
-                Performed advanced SQL queries using joins,
-                subqueries, and aggregate functions
-                for business data analysis.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Project 4 -->
-
-        <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
-              alt="Python Analytics">
-
-            <div class="project-content">
-
-              <h4>Python Analytics Project</h4>
-
-              <p>
-                Used Python, Pandas, and NumPy libraries
-                for data cleaning, analysis, and visualization.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Project 5 -->
-
-        <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
-              alt="Student Management System">
-
-            <div class="project-content">
-
-              <h4>Student Management System</h4>
-
-              <p>
-                Developed a Student Management System
-                for managing student records and performance details.
-              </p>
-
-              <ul>
-                <li>Add Student</li>
-                <li>Update Student</li>
-                <li>Delete Student</li>
-                <li>Search Student</li>
-              </ul>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Project 6 -->
-
-        <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-              alt="Power BI Dashboard">
-
-            <div class="project-content">
-
-            <h4 class="mb-3">Power BI Sales Dashboard</h4>
-               
-<a href="https://github.com/jyotisharma-cyber/Power-Bi-Project-Sales"
-   target="_blank"
-   class="btn btn-primary">
-  
-   View Project
-
-</a>
-
-              <p>
-                Designed an interactive Power BI dashboard
-                with KPIs, charts, slicers, and business insights.
-              </p>
-
+              <h4 class="mb-3">Power BI Sales Dashboard</h4>
+              <a href="https://github.com/jyotisharma-cyber/Power-Bi-Project-Sales" target="_blank" class="btn btn-primary mb-3">View Project</a>
+              <p>Designed an interactive Power BI dashboard with KPIs, charts, slicers, and business insights.</p>
               <ul>
                 <li>Sales KPIs</li>
                 <li>Monthly Revenue Analysis</li>
                 <li>Top Products Analysis</li>
                 <li>Region-wise Sales Report</li>
               </ul>
-
             </div>
-
           </div>
-
         </div>
 
-        <!-- Project 7 -->
-
+        <!-- POWER BI HR -->
         <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692"
-              alt="Streamlit App">
-
+          <div class="project-card p-hr-analytics">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="HR Analytics">
             <div class="project-content">
-
-              <h4>Streamlit Analytics App</h4>
-
-              <p>
-                Built an interactive Streamlit analytics app
-                for dashboard reporting and data visualization.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- Project 8 -->
-
-        <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1553877522-43269d4ea984"
-              alt="HR Analytics">
-
-            <div class="project-content">
-
-            <h4 class="mb-3">HR Analytics Dashboard</h4>
-              
-<a href="https://github.com/jyotisharma-cyber/HR-ANALYTICS"
-   target="_blank"
-   class="btn btn-primary">
-   View Project
-
-</a>
-              <p>
-                Built an HR analytics dashboard to analyze employee attrition,
-                salary trends, department performance, and workforce insights
-                using Power BI.
-              </p>
-
+              <h4 class="mb-3">HR Analytics Dashboard</h4>
+              <a href="https://github.com/jyotisharma-cyber/HR-ANALYTICS" target="_blank" class="btn btn-primary mb-3">View Project</a>
+              <p>Built an HR analytics dashboard to analyze employee attrition, salary trends, department performance, and workforce insights using Power BI.</p>
               <ul>
                 <li>Employee Attrition Analysis</li>
                 <li>Department-wise Performance Insights</li>
@@ -742,221 +523,150 @@
                 <li>Interactive Slicers & Filters</li>
                 <li>HR KPI Monitoring</li>
               </ul>
-
             </div>
-
           </div>
+        </div>        
 
-        </div>
-
-
-        <!-- Project 9 -->
-
+         <!-- POWER BI FINANCE -->
         <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"
-              alt="Finance Dashboard">
-
+          <div class="project-card p-finance-dashboard">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Finance Dashboard">
             <div class="project-content">
-
               <h4>Finance Dashboard</h4>
-
-              <p>
-                Developed a finance dashboard to track expenses, budget vs actual
-                performance, profit margins, and financial KPIs using Power BI
-                and Excel.
-              </p>
-
+              <p>Developed a finance dashboard to track expenses, budget vs actual performance, profit margins, and financial KPIs using Power BI and Excel.</p>
             </div>
-
           </div>
-
         </div> 
         
-        <!-- Project 10 -->
-
+         <!-- POWER BI E-Commerce -->
         <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d"
-              alt="E-Commerce Dashboard">
-
+          <div class="project-card p-ecommerce-dashboard">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" alt="E-Commerce Dashboard">
             <div class="project-content">
-
               <h4>E-Commerce Dashboard</h4>
-
-              <p>
-                Created an interactive dashboard to analyze customer behavior,
-                repeat customers, sales trends, and delivery performance using
-                Power BI.
-              </p>
-
+              <p>Created an interactive dashboard to analyze customer behavior, repeat customers, sales trends, and delivery performance using Power BI.</p>
             </div>
-
           </div>
-
         </div>
         
-        <!-- Project 11 -->
-
+         <!-- POWER BI COACHING INSTITUTE -->
         <div class="col-md-4">
-
-          <div class="project-card">
-
-            <img
-              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644"
-              alt="Coaching Institute Dashboard">
-
+          <div class="project-card p-coaching-dashboard">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Coaching Institute Dashboard">
             <div class="project-content">
-
-            <h4 class=""mb-3>Coaching Institute Dashboard</h4>
-<a href="https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard"
-   target="_blank"
-   class="btn btn-primary">
-   View Project
-
-</a>
-              <p>
-                Built an dashboard to monitor student admissions, fee
-                collection, attendance, and faculty performance using Power BI
-                and Excel.
-              </p>
-
+              <h4 class="mb-3">Coaching Institute Dashboard</h4>
+              <a href="https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard" target="_blank" class="btn btn-primary">View Project</a>
+              <p>Built a dashboard to monitor student admissions, fee collection, attendance, and faculty performance using Power BI and Excel.</p>
             </div>
-
           </div>
+        </div> 
+               
+        <!-- STUDENT MANAGEMENT-->
+        <div class="col-md-4">
+          <div class="project-card p-student-system">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Student Management System">
+            <div class="project-content">
+              <h4>Student Management System</h4>
+              <p>Developed a Student Management System for managing student records and performance details.</p>
+              <ul>
+                <li>Add Student</li>
+                <li>Update Student</li>
+                <li>Delete Student</li>
+                <li>Search Student</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-        </div>        
+          
+        <!-- SQL ANALYTICS -->
+        <div class="col-md-4">
+          <div class="project-card p-sql-analytics">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="SQL Analytics">
+            <div class="project-content">
+              <h4>SQL Analytics Project</h4>
+              <p>Performed advanced SQL queries using joins, subqueries, and aggregate functions for business data analysis.</p>
+            </div>
+          </div>
+        </div>
+
+      
+<!-- PYTHON ANALYTICS -->
+        <div class="col-md-4">
+          <div class="project-card p-python-analytics">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Python Analytics">
+            <div class="project-content">
+              <h4>Python Analytics Project</h4>
+              <p>Used Python, Pandas, and NumPy libraries for data cleaning, analysis, and visualization.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+
+         <!-- PYTHON -->
+        <div class="col-md-4">
+          <div class="project-card p-streamlit-app">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Streamlit App">
+            <div class="project-content">
+              <h4>Streamlit Analytics App</h4>
+              <p>Built an interactive Streamlit analytics app for dashboard reporting and data visualization.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Contact Section -->
-
+ <!-- CONTACT ME -->
   <section id="contact">
-
     <div class="container">
-
       <h2 class="section-title">Contact Me</h2>
-
       <div class="row justify-content-center">
-
         <div class="col-md-8">
-
           <div class="contact-box">
-
             <form id="contactForm">
-
               <div class="mb-3">
-
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                  required>
-
+                <input type="text" class="form-control" placeholder="Your Name" required>
               </div>
-
               <div class="mb-3">
-
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  required>
-
+                <input type="email" class="form-control" placeholder="Your Email" required>
               </div>
-
               <div class="mb-3">
-
-                <textarea
-                  class="form-control"
-                  rows="5"
-                  placeholder="Your Message"
-                  required></textarea>
-
+                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
               </div>
-
-              <button
-                type="submit"
-                class="btn btn-primary">
-
-                Send Message
-
-              </button>
-
+              <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
-
-            <!-- Contact Information -->
 
             <hr class="my-4">
 
             <div class="contact-info">
-
               <h4 class="mb-3">Contact Information</h4>
-
-              <p>
-                <i class="fa-solid fa-envelope"></i>
-                Email: sharmajyt0311@gmail.com
-              </p>
-
-              <p>
-                <i class="fa-solid fa-phone"></i>
-                Phone: 9350425542
-              </p>
-
-              <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Location: Rewari, Haryana, India
-              </p>
-
+              <p><i class="fa-solid fa-envelope"></i> Email: sharmajyt0311@gmail.com</p>
+              <p><i class="fa-solid fa-phone"></i> Phone: 9350425542</p>
+              <p><i class="fa-solid fa-location-dot"></i> Location: Rewari, Haryana, India</p>
             </div>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
-
   </section>
 
-  <!-- Footer -->
-
+   <!-- FOOTER -->
   <footer>
-
-    <p>
-      © 2026 Jyoti kashyap Portfolio | All Rights Reserved
-    </p>
-
+    &copy; 2026 Jyoti kashyap Portfolio | All Rights Reserved
   </footer>
-
-  <!-- Bootstrap JS -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- JavaScript -->
-
   <script>
-
-    document
-    .getElementById("contactForm")
-    .addEventListener("submit", function(e){
-
+    document.getElementById("contactForm").addEventListener("submit", function(e){
       e.preventDefault();
-
       alert("Message Sent Successfully!");
-
       this.reset();
-
     });
-
   </script>
 
 </body>
-
 </html>
