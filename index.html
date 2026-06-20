@@ -73,7 +73,7 @@
       color: #03f8f8;
     }
 
-    /* Sections */
+    /* Sections Layout */
     section {
       padding: 80px 0;
     }
@@ -85,15 +85,21 @@
       font-weight: bold;
     }
 
-    /* About */
+    /* Custom Colors for specific Title Headings */
+    #skills .section-title { color: #2563eb; }
+    #ai-tools .section-title { color: #f59e0b; }
+    #education .section-title { color: #4f46e5; }
+    #projects .section-title { color: #0d9488; }
+
+    /* About Section */
     .about-box {
       background: rgb(247, 242, 171);
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 10px rgba(248, 42, 197, 0.1);
     }
 
-    /* 1. Skill Cards Light Tints */
+    /* Card Base Setup */
     .skill-card {
       padding: 30px 20px;
       border-radius: 12px;
@@ -107,18 +113,6 @@
       transform: translateY(-8px);
       box-shadow: 0 10px 20px rgba(0,0,0,0.12);
     }
-
-    .powerbi-pillar { background-color: #fefae6; border-top-color: #F2C811; }
-    .powerbi-pillar i { color: #F2C811; }
-
-    .excel-pillar { background-color: #c9fad5; border-top-color: #107C41; }
-    .excel-pillar i { color: #107C41; }
-    
-    .sql-pillar { background-color: #fddff3; border-top-color: #f3a1e8; }
-    .sql-pillar i { color: #f3a1e8; }
-    
-    .python-pillar { background-color: #d5e8f8; border-top-color: #3776AB; }
-    .python-pillar i { color: #3776AB; }
 
     .skill-card i {
       font-size: 45px;
@@ -141,12 +135,29 @@
       color: #444;
     }
 
-    /* AI Tools Section Background styling */
+    /* ==========================================================================
+       1. SKILLS CONTAINER DYNAMICS
+       ========================================================================== */
+    .powerbi-pillar { background-color: #fefae6; border-top-color: #F2C811; }
+    .powerbi-pillar i, .powerbi-pillar h4 { color: #F2C811; }
+
+    .excel-pillar { background-color: #c9fad5; border-top-color: #107C41; }
+    .excel-pillar i, .excel-pillar h4 { color: #107C41; }
+    
+    .sql-pillar { background-color: #fddff3; border-top-color: #e044ce; }
+    .sql-pillar i, .sql-pillar h4 { color: #e044ce; }
+    
+    .python-pillar { background-color: #d5e8f8; border-top-color: #3776AB; }
+    .python-pillar i, .python-pillar h4 { color: #3776AB; }
+
+    /* AI Tools Background styling */
     #ai-tools {
       background: #fafcff;
     }
 
-    /* 2. Education Cards Light Tints */
+    /* ==========================================================================
+       2. EDUCATION BOX DYNAMICS
+       ========================================================================== */
     .edu-box {
       padding: 25px;
       margin-bottom: 20px;
@@ -160,11 +171,18 @@
       transform: translateY(-10px);
     }
 
-    .mca { background: linear-gradient(135deg, #fef5e7, #fdf0cd); border-left: 5px solid #fc7201; }
-    .bsc-cs { background: linear-gradient(135deg, #f5eefb, #ebdcf7); border-left: 5px solid #4604fc; }
-    .data-analyst { background: linear-gradient(135deg, #fef0f9, #fde2f4); border-left: 5px solid #fd038d; }
+    .mca { background: #fef5e7; border-left: 5px solid #fc7201; }
+    .mca h4 { color: #fc7201; font-weight: 700; }
 
-    /* 3. Project Cards Light Tint Style Setup */
+    .bsc-cs { background: #f5eefb; border-left: 5px solid #4604fc; }
+    .bsc-cs h4 { color: #4604fc; font-weight: 700; }
+
+    .data-analyst { background: #fef0f9; border-left: 5px solid #fd038d; }
+    .data-analyst h4 { color: #fd038d; font-weight: 700; }
+
+    /* ==========================================================================
+       3. PROJECT BOX DYNAMICS
+       ========================================================================== */
     .project-card {
       border-radius: 10px;
       overflow: hidden;
@@ -190,7 +208,6 @@
     }
 
     .project-content h4 {
-      color: #0d6efd;
       margin-bottom: 15px;
     }
 
@@ -198,20 +215,41 @@
       padding-left: 20px;
     }
 
-    /* Individual Projects Colors & Borders */
-    .p-car-sales { background: linear-gradient(135deg, #e0f2fe, #bae6fd); border-left: 5px solid #0284c7; }
-    .p-road-accident { background: linear-gradient(135deg, #ffedd5, #fed7aa); border-left: 5px solid #f97316; }
-    .p-sql-analytics { background: linear-gradient(135deg, #f0fdf4, #dcfce7); border-left: 5px solid #22c55e; }
-    .p-python-analytics { background: linear-gradient(135deg, #fef9c3, #fef08a); border-left: 5px solid #eab308; }
-    .p-student-system { background: linear-gradient(135deg, #faf5ff, #f3e8ff); border-left: 5px solid #a855f7; }
-    .p-powerbi-sales { background: linear-gradient(135deg, #edf2f7, #e2e8f0); border-left: 5px solid #4a5568; }
-    .p-streamlit-app { background: linear-gradient(135deg, #fff1f2, #ffe4e6); border-left: 5px solid #f43f5e; }
-    .p-hr-analytics { background: linear-gradient(135deg, #f0fdfa, #ccfbf1); border-left: 5px solid #0d9488; }
-    .p-finance-dashboard { background: linear-gradient(135deg, #eff6ff, #dbeafe); border-left: 5px solid #2563eb; }
-    .p-ecommerce-dashboard { background: linear-gradient(135deg, #fdf2f8, #fce7f3); border-left: 5px solid #db2777; }
-    .p-coaching-dashboard { background: linear-gradient(135deg, #f5f5f4, #e7e5e4); border-left: 5px solid #57534e; }
+    /* Individual Projects Theme Colors Mapping */
+    .p-car-sales { background: #e0f2fe; border-left: 5px solid #0284c7; }
+    .p-car-sales h4 { color: #0284c7; font-weight: 700; }
 
-    /* 4. Contact Box Light Tint Style Setup */
+    .p-road-accident { background: #ffedd5; border-left: 5px solid #f97316; }
+    .p-road-accident h4 { color: #f97316; font-weight: 700; }
+
+    .p-sql-analytics { background: #f0fdf4; border-left: 5px solid #22c55e; }
+    .p-sql-analytics h4 { color: #22c55e; font-weight: 700; }
+
+    .p-python-analytics { background: #fef9c3; border-left: 5px solid #b48c06; }
+    .p-python-analytics h4 { color: #b48c06; font-weight: 700; }
+
+    .p-student-system { background: #faf5ff; border-left: 5px solid #a855f7; }
+    .p-student-system h4 { color: #a855f7; font-weight: 700; }
+
+    .p-powerbi-sales { background: #edf2f7; border-left: 5px solid #4a5568; }
+    .p-powerbi-sales h4 { color: #4a5568; font-weight: 700; }
+
+    .p-streamlit-app { background: #fff1f2; border-left: 5px solid #f43f5e; }
+    .p-streamlit-app h4 { color: #f43f5e; font-weight: 700; }
+
+    .p-hr-analytics { background: #f0fdfa; border-left: 5px solid #0d9488; }
+    .p-hr-analytics h4 { color: #0d9488; font-weight: 700; }
+
+    .p-finance-dashboard { background: #eff6ff; border-left: 5px solid #2563eb; }
+    .p-finance-dashboard h4 { color: #2563eb; font-weight: 700; }
+
+    .p-ecommerce-dashboard { background: #fdf2f8; border-left: 5px solid #db2777; }
+    .p-ecommerce-dashboard h4 { color: #db2777; font-weight: 700; }
+
+    .p-coaching-dashboard { background: #f5f5f4; border-left: 5px solid #57534e; }
+    .p-coaching-dashboard h4 { color: #57534e; font-weight: 700; }
+
+    /* Contact Form Setup */
     .contact-box {
       background: linear-gradient(135deg, #f0fdf4, #e6fbf0); 
       border-left: 5px solid #10b981;
@@ -229,7 +267,7 @@
       margin-right: 10px;
     }
 
-    /* Footer */
+    /* Footer Layout */
     footer {
       background: #f8aedc;
       color: rgb(14, 12, 12);
@@ -241,7 +279,6 @@
 </head>
 
 <body>
-<!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Jyoti kashyap</a>
@@ -269,7 +306,7 @@
       <a href="#contact" class="btn btn-custom mt-3 px-4 py-2">Contact Me</a>
     </div>
   </section>
-<!-- ABOUT ME -->
+
   <section id="about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
@@ -288,13 +325,12 @@
       </div>
     </div>
   </section>
-<!-- SKILLS -->
+
   <section id="skills">
     <div class="container">
       <h2 class="section-title">Skills</h2>
       <div class="row g-4 justify-content-center">
 
-        <!-- Power BI -->
         <div class="col-md-6 col-lg-3">
           <div class="skill-card powerbi-pillar">
             <div class="text-center">
@@ -311,7 +347,6 @@
           </div>
         </div>
 
-        <!-- EXCEL -->
         <div class="col-md-6 col-lg-3">
           <div class="skill-card excel-pillar">
             <div class="text-center">
@@ -328,7 +363,6 @@
           </div>
         </div>
 
-        <!-- MY SQL -->
         <div class="col-md-6 col-lg-3">
           <div class="skill-card sql-pillar">
             <div class="text-center">
@@ -346,7 +380,6 @@
           </div>
         </div>
 
-        <!-- PYTHON -->
         <div class="col-md-6 col-lg-3">
           <div class="skill-card python-pillar">
             <div class="text-center">
@@ -367,17 +400,18 @@
       </div>
     </div>
   </section>
-<!-- AI TOOLS -->
+
   <section id="ai-tools">
     <div class="container">
       <h2 class="section-title">AI Tools</h2>
       <div class="row g-4 justify-content-center">
 
-        <!-- CHATGPT -->
         <div class="col-md-3">
           <div class="skill-card" style="background:#fef3c7; border-top:5px solid #f59e0b; color:#f59e0b;">
-            <i class="fas fa-robot" style="color:#f59e0b; background: white;"></i>
-            <h4 style="color:#f59e0b;">ChatGPT</h4>
+            <div class="text-center">
+              <i class="fas fa-robot" style="color:#f59e0b;"></i>
+              <h4 style="color:#f59e0b;">ChatGPT</h4>
+            </div>
             <ul>
               <li>Data Analysis</li>
               <li>SQL Queries</li>
@@ -387,11 +421,12 @@
           </div>
         </div>
 
-        <!-- GOOGLE GEMINI -->
         <div class="col-md-3">
           <div class="skill-card" style="background:#ecfdf5; border-top:5px solid #10b981; color:#10b981;">
-            <i class="fas fa-brain" style="color:#10b981; background: white;"></i>
-            <h4 style="color:#10b981;">Google Gemini</h4>
+            <div class="text-center">
+              <i class="fas fa-brain" style="color:#10b981;"></i>
+              <h4 style="color:#10b981;">Google Gemini</h4>
+            </div>
             <ul>
               <li>Data Insights</li>
               <li>Research</li>
@@ -401,11 +436,12 @@
           </div>
         </div>
 
-        <!-- MICROSOFT COPILOT -->
         <div class="col-md-3">
           <div class="skill-card" style="background:#eff6ff; border-top:5px solid #3b82f6; color:#3b82f6;">
-            <i class="fas fa-microchip" style="color:#3b82f6; background: white;"></i>
-            <h4 style="color:#3b82f6;">Microsoft Copilot</h4>
+            <div class="text-center">
+              <i class="fas fa-microchip" style="color:#3b82f6;"></i>
+              <h4 style="color:#3b82f6;">Microsoft Copilot</h4>
+            </div>
             <ul>
               <li>Excel Automation</li>
               <li>Power BI Support</li>
@@ -415,11 +451,12 @@
           </div>
         </div>
         
-        <!-- CLAUDE AI -->
         <div class="col-md-3">
           <div class="skill-card" style="background:#fdf2f8; border-top:5px solid #ec4899; color:#ec4899;">
-            <i class="fas fa-wand-magic-sparkles" style="color:#ec4899; background: white;"></i>
-            <h4 style="color:#ec4899;">Claude AI</h4>
+            <div class="text-center">
+              <i class="fas fa-wand-magic-sparkles" style="color:#ec4899;"></i>
+              <h4 style="color:#ec4899;">Claude AI</h4>
+            </div>
             <ul>
               <li>Documentation</li>
               <li>Data Interpretation</li>
@@ -433,19 +470,16 @@
     </div>
   </section>
 
-<!-- EDUCATION -->
   <section id="education">
     <div class="container">
       <h2 class="section-title">Education</h2>
 
-      <!-- MCA -->
       <div class="edu-box mca">
         <h4>Master of Computer Applications (MCA)</h4>
         <p>University Name :- Indira Gandhi University,Rewari,Haryana </p>
         <p>Session :- 2023 - 2025 </p>
       </div>
 
-      <!-- BSC -->
       <div class="edu-box bsc-cs">
         <h4>B.Sc Computer Science</h4>
         <p>College Name :- GCW Gurawara,Rewari,Haryana </p>
@@ -453,7 +487,6 @@
         <p>Session :- 2018 - 2021</p>
       </div>
 
-      <!-- CERTIFICATE -->
       <div class="edu-box data-analyst">
         <h4>Data Analyst</h4>
         <p>Institute Name :- Zillionsoftech,Rewari,Haryana </p>
@@ -462,13 +495,11 @@
     </div>
   </section>
 
-<!-- Projects -->
   <section id="projects">
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="row g-4">
 
-        <!-- CAR SALES -->
         <div class="col-md-4">
           <div class="project-card p-car-sales">
             <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Car Sales Dashboard">
@@ -479,7 +510,6 @@
           </div>
         </div>
 
-        <!-- ROAD ACCIDENT -->
         <div class="col-md-4">
           <div class="project-card p-road-accident">
             <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Road Accident Dashboard">
@@ -490,13 +520,12 @@
           </div>
         </div>
 
-        <!-- POWER BI SALES -->
         <div class="col-md-4">
           <div class="project-card p-powerbi-sales">
             <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Power BI Dashboard">
             <div class="project-content">
-              <h4 class="mb-3">Power BI Sales Dashboard</h4>
-              <a href="https://github.com/jyotisharma-cyber/Power-Bi-Project-Sales" target="_blank" class="btn btn-primary mb-3">View Project</a>
+              <h4>Power BI Sales Dashboard</h4>
+              <a href="https://github.com/jyotisharma-cyber/Power-Bi-Project-Sales" target="_blank" class="btn btn-primary btn-sm my-2">View Project</a>
               <p>Designed an interactive Power BI dashboard with KPIs, charts, slicers, and business insights.</p>
               <ul>
                 <li>Sales KPIs</li>
@@ -508,13 +537,12 @@
           </div>
         </div>
 
-        <!-- POWER BI HR -->
         <div class="col-md-4">
           <div class="project-card p-hr-analytics">
             <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="HR Analytics">
             <div class="project-content">
-              <h4 class="mb-3">HR Analytics Dashboard</h4>
-              <a href="https://github.com/jyotisharma-cyber/HR-ANALYTICS" target="_blank" class="btn btn-primary mb-3">View Project</a>
+              <h4>HR Analytics Dashboard</h4>
+              <a href="https://github.com/jyotisharma-cyber/HR-ANALYTICS" target="_blank" class="btn btn-primary btn-sm my-2">View Project</a>
               <p>Built an HR analytics dashboard to analyze employee attrition, salary trends, department performance, and workforce insights using Power BI.</p>
               <ul>
                 <li>Employee Attrition Analysis</li>
@@ -527,7 +555,6 @@
           </div>
         </div>        
 
-         <!-- POWER BI FINANCE -->
         <div class="col-md-4">
           <div class="project-card p-finance-dashboard">
             <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f" alt="Finance Dashboard">
@@ -538,7 +565,6 @@
           </div>
         </div> 
         
-         <!-- POWER BI E-Commerce -->
         <div class="col-md-4">
           <div class="project-card p-ecommerce-dashboard">
             <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" alt="E-Commerce Dashboard">
@@ -549,19 +575,17 @@
           </div>
         </div>
         
-         <!-- POWER BI COACHING INSTITUTE -->
         <div class="col-md-4">
           <div class="project-card p-coaching-dashboard">
             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Coaching Institute Dashboard">
             <div class="project-content">
-              <h4 class="mb-3">Coaching Institute Dashboard</h4>
-              <a href="https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard" target="_blank" class="btn btn-primary">View Project</a>
+              <h4>Coaching Institute Dashboard</h4>
+              <a href="https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard" target="_blank" class="btn btn-primary btn-sm my-2">View Project</a>
               <p>Built a dashboard to monitor student admissions, fee collection, attendance, and faculty performance using Power BI and Excel.</p>
             </div>
           </div>
         </div> 
                
-        <!-- STUDENT MANAGEMENT-->
         <div class="col-md-4">
           <div class="project-card p-student-system">
             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Student Management System">
@@ -578,8 +602,6 @@
           </div>
         </div>
 
-          
-        <!-- SQL ANALYTICS -->
         <div class="col-md-4">
           <div class="project-card p-sql-analytics">
             <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="SQL Analytics">
@@ -590,8 +612,6 @@
           </div>
         </div>
 
-      
-<!-- PYTHON ANALYTICS -->
         <div class="col-md-4">
           <div class="project-card p-python-analytics">
             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Python Analytics">
@@ -602,10 +622,6 @@
           </div>
         </div>
 
-
-
-
-         <!-- PYTHON -->
         <div class="col-md-4">
           <div class="project-card p-streamlit-app">
             <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Streamlit App">
@@ -615,11 +631,11 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
- <!-- CONTACT ME -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Contact Me</h2>
@@ -653,7 +669,6 @@
     </div>
   </section>
 
-   <!-- FOOTER -->
   <footer>
     &copy; 2026 Jyoti kashyap Portfolio | All Rights Reserved
   </footer>
