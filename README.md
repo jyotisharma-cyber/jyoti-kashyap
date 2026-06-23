@@ -1,5 +1,7 @@
 ## PowerBi Dashboard
 
+## LinkedIn Link :- https://www.linkedin.com/in/jyoti-kashyap/
+
 ## Coaching-Institute-Dashboard 
 
 Github Link :- https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard
