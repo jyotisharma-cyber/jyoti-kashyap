@@ -1,5 +1,11 @@
 ## PowerBi Dashboard
 
+## Coaching-Institute-Dashboard 
+
+Github Link :- https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard
+
+---
+
 ### Europe Sales Dashboard
 Github Link :- ![Europe-Sales-Data-Analysis]((https://github.com/jyotisharma-cyber/Europe-Sales-Data-Analysis))
 
@@ -12,11 +18,6 @@ Github Link :- ![HR Analytics Dashboard]((https://github.com/jyotisharma-cyber/H
 
 ### PowerBi Sales Dashboard
 Github Link :- ![Super Store Sales Dashboard]((https://github.com/jyotisharma-cyber/Power-Bi-Project-Sales))
-
----
-## Coaching-Institute-Dashboard 
-
-Github Link :- ![Coaching Institute Dashboard]((https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard))
 
 ---
 
