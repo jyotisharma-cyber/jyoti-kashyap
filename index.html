@@ -6,7 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jyoti kashyap Portfolio</title>
 
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
@@ -18,110 +21,239 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f7fc;
-      color: #333;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fdfefe;
+      color: #1e293b;
     }
 
-    /* Navbar */
+    /* Navbar - Clean and light modern style */
     .navbar {
-      background: #f8aedc;
+      background: rgba(255, 255, 255, 0.85) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding: 15px 0;
     }
 
-    .navbar-brand,
+    .navbar-brand {
+      font-weight: 700;
+      color: #0f172a !important;
+    }
+
     .nav-link {
-      color: rgb(2, 0, 0) !important;
-      font-weight: 500;
+      color: #334155 !important;
+      font-weight: 600;
+      transition: color 0.2s;
     }
 
     .nav-link:hover {
-      color: #ffd700 !important;
+      color: #38bdf8 !important;
     }
 
-    /* Hero Section */
+    /* Hero Section - Light & Modern background with floating shapes */
     .hero {
-      height: 100vh;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
-      background-size: cover;
-      background-position: center;
+      min-height: 100vh;
+      background: radial-gradient(circle at 80% 20%, #e0f2fe 0%, #f8fafc 50%);
       display: flex;
-      justify-content: center;
       align-items: center;
-      text-align: center;
-      color: white;
+      position: relative;
+      overflow: hidden;
+      padding-top: 100px;
     }
 
-    .hero h1 {
-      font-size: 60px;
-      font-weight: bold;
+    /* Decorative abstract shapes */
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: #fde047;
+      border-radius: 50% 0 50% 50%;
+      top: 15%;
+      left: 10%;
+      opacity: 0.6;
     }
 
-    .hero p {
-      font-size: 24px;
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      background: #38bdf8;
+      border-radius: 50%;
+      bottom: 20%;
+      left: 45%;
+      opacity: 0.5;
+    }
+
+    .hero-content h1 {
+      font-size: 56px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.1;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      font-weight: 600;
+      color: #38bdf8;
       margin-top: 15px;
     }
 
+    .hero-text {
+      font-size: 18px;
+      color: #64748b;
+      margin-top: 15px;
+      max-width: 600px;
+    }
+
+    /* Profile Image styling */
+    .profile-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-container::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #bae6fd;
+      border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+      z-index: 1;
+      top: 10px;
+      left: 10px;
+    }
+
+    .profile-img {
+      width: 380px;
+      height: 380px;
+      border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Buttons matching template design */
     .btn-custom {
-      background: #ffd700;
-      color: black;
+      background: #38bdf8;
+      color: white;
       border: none;
-      font-weight: bold;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 12px 28px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
     }
 
     .btn-custom:hover {
-      background: rgb(3, 11, 15);
-      color: #03f8f8;
+      background: #0284c7;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+    }
+
+    .btn-custom-outline {
+      background: transparent;
+      color: #334155;
+      border: 2px solid #cbd5e1;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 12px 28px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .btn-custom-outline:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+      border-color: #94a3b8;
+      transform: translateY(-2px);
+    }
+
+    .btn-icon-only {
+      width: 52px;
+      height: 52px;
+      padding: 0;
     }
 
     /* Sections Layout */
     section {
-      padding: 80px 0;
+      padding: 100px 0;
     }
 
     .section-title {
       text-align: center;
       margin-bottom: 50px;
-      color: #0d0d0e;
-      font-weight: bold;
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 36px;
     }
 
-    /* Custom Colors for specific Title Headings */
-    #skills .section-title { color: #2563eb; }
-    #ai-tools .section-title { color: #f59e0b; }
-    #education .section-title { color: #4f46e5; }
-    #projects .section-title { color: #0d9488; }
-
-    /* About Section */
+    /* About Section styling */
     .about-box {
-      background: rgb(247, 242, 171);
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(248, 42, 197, 0.1);
+      background: #f0fdfa;
+      border-left: 6px solid #0d9488;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02);
     }
 
-    /* Card Base Setup */
-    .skill-card {
-      padding: 30px 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-      transition: 0.3s ease-in-out;
+    /* Achievement Cards Styled exactly like AI Tool Cards */
+    .achievement-card {
+      border-radius: 20px;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       height: 100%;
-      border-top: 5px solid #333;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    }
+
+    .achievement-card h3 {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .achievement-card p {
+      font-weight: 700;
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    /* Card Base Setup for Skills */
+    .skill-card {
+      padding: 35px 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      height: 100%;
     }
 
     .skill-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
     }
 
     .skill-card i {
       font-size: 45px;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
 
     .skill-card h4 {
       font-weight: 700;
       margin-bottom: 20px;
+      font-size: 18px;
     }
 
     .skill-card ul {
@@ -131,44 +263,39 @@
     }
 
     .skill-card ul li {
-      margin-bottom: 8px;
-      color: #444;
+      margin-bottom: 10px;
+      color: #475569;
     }
 
-    /* ==========================================================================
-       1. SKILLS CONTAINER DYNAMICS
-       ========================================================================== */
-    .powerbi-pillar { background-color: #fefae6; border-top-color: #F2C811; }
+    /* SKILLS CONTAINER BACKGROUND DYNAMICS */
+    .powerbi-pillar { background-color: #fefae6; }
     .powerbi-pillar i, .powerbi-pillar h4 { color: #F2C811; }
 
-    .excel-pillar { background-color: #c9fad5; border-top-color: #107C41; }
+    .excel-pillar { background-color: #c9fad5; }
     .excel-pillar i, .excel-pillar h4 { color: #107C41; }
     
-    .sql-pillar { background-color: #fddff3; border-top-color: #e044ce; }
+    .sql-pillar { background-color: #fddff3; }
     .sql-pillar i, .sql-pillar h4 { color: #e044ce; }
     
-    .python-pillar { background-color: #d5e8f8; border-top-color: #3776AB; }
+    .python-pillar { background-color: #d5e8f8; }
     .python-pillar i, .python-pillar h4 { color: #3776AB; }
 
-    /* AI Tools Background styling */
     #ai-tools {
-      background: #fafcff;
+      background: #f8fafc;
     }
 
-    /* ==========================================================================
-       2. EDUCATION BOX DYNAMICS
-       ========================================================================== */
+    /* EDUCATION BOX DYNAMICS */
     .edu-box {
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      color: rgb(2, 2, 2);
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+      color: #1e293b;
       transition: 0.3s;
     }
 
     .edu-box:hover {
-      transform: translateY(-10px);
+      transform: translateX(10px);
     }
 
     .mca { background: #fef5e7; border-left: 5px solid #fc7201; }
@@ -180,21 +307,19 @@
     .data-analyst { background: #fef0f9; border-left: 5px solid #fd038d; }
     .data-analyst h4 { color: #fd038d; font-weight: 700; }
 
-    /* ==========================================================================
-       3. PROJECT BOX DYNAMICS
-       ========================================================================== */
+    /* PROJECT BOX DYNAMICS */
     .project-card {
-      border-radius: 10px;
+      border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
       transition: 0.3s ease-in-out;
       height: 100%;
+      border: none;
     }
 
     .project-card:hover {
-      transform: translateY(-5px) scale(1.01);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      filter: brightness(0.97);
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
     }
 
     .project-card img {
@@ -204,7 +329,7 @@
     }
 
     .project-content {
-      padding: 20px;
+      padding: 25px;
     }
 
     .project-content h4 {
@@ -215,7 +340,7 @@
       padding-left: 20px;
     }
 
-    /* Individual Projects Theme Colors Mapping */
+    /* Individual Projects Colors Preserved */
     .p-car-sales { background: #e0f2fe; border-left: 5px solid #0284c7; }
     .p-car-sales h4 { color: #0284c7; font-weight: 700; }
 
@@ -252,14 +377,17 @@
     /* Contact Form Setup */
     .contact-box {
       background: linear-gradient(135deg, #f0fdf4, #e6fbf0); 
-      border-left: 5px solid #10b981;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-left: 6px solid #10b981;
+      padding: 45px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(16, 185, 129, 0.05);
     }
 
     .contact-box .form-control {
       background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 12px;
+      border-radius: 10px;
     }
 
     .contact-info i {
@@ -269,11 +397,12 @@
 
     /* Footer Layout */
     footer {
-      background: #f8aedc;
-      color: rgb(14, 12, 12);
+      background: #0f172a;
+      color: #94a3b8;
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       width: 100%;
+      font-weight: 500;
     }
   </style>
 </head>
@@ -288,6 +417,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -297,27 +427,45 @@
     </div>
   </nav>
 
+<!-- Hero Section -->
   <section class="hero">
-    <div>
-      <h1>Hello, I'm Jyoti kashyap</h1>
-      <p>Aspiring Data Analyst</p>
-      <a href="#projects" class="btn btn-custom mt-3 px-4 py-2">View Projects</a>
-      <a href="Jyoti_Kashyap_Modern_Resume.docx" class="btn btn-custom mt-3 px-4 py-2">Download Resume</a>
-      <a href="#contact" class="btn btn-custom mt-3 px-4 py-2">Contact Me</a>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 hero-content text-start order-2 order-lg-1">
+          <h1>Hello, I'm <br><span style="color:#38bdf8;">Jyoti kashyap</span></h1>
+          <p class="hero-subtitle">Aspiring Data Analyst | Power BI | SQL | Python | Excel</p>
+          <p class="hero-text">
+            Transforming Raw Data into Actionable Business Insights through Data Visualization, Analytics, and Dashboard Development.
+          </p>
+          <div class="mt-4 d-flex flex-wrap gap-3 align-items-center">
+            <a href="#projects" class="btn-custom-outline"><i class="fas fa-external-link-alt me-2"></i>View Projects</a>
+            <a href="#contact" class="btn-custom-outline"><i class="fas fa-phone me-2"></i>Contact Me</a>
+            <a href="Jyoti_Kashyap_Modern_Resume.docx" class="btn-custom-outline"><i class="fa-solid fa-download me-2"></i>Resume</a>
+            <a href="https://github.com/jyotisharma-cyber/jyoti-kashyap" class="btn-custom-outline" aria-label="GitHub"><i class="fab fa-github me-2"></i>GitHub</a>
+            <a href="https://www.linkedin.com/in/jyoti-kashyap-7a0a71365/" class="btn-custom-outline" aria-label="LinkedIn"><i class="fab fa-linkedin-in me-2"></i>LinkedIn</a>
+          </div>
+        </div> 
+        <div class="col-lg-6 text-center text-lg-end order-1 order-lg-2 mb-5 mb-lg-0">
+          <div class="profile-container">
+            <img src="images/Profile_image.PNG" class="profile-img" alt="Jyoti Kashyap"> 
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </section> 
 
+<!-- About Section -->
   <section id="about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
       <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
           <div class="about-box">
-            <p>
+            <p class="fs-5">
               Data Analyst with knowledge of Excel, Python (NumPy, Pandas, and Matplotlib), SQL, Power BI, and data visualization techniques. 
               Skilled in data cleaning, reporting, dashboard development, and extracting actionable insights from datasets.
             </p>
-            <p>
+            <p class="fs-5 mb-0">
               Passionate about analytics, business intelligence, and continuous learning with the goal of helping organizations make data-driven decisions.
             </p>
           </div>
@@ -326,6 +474,45 @@
     </div>
   </section>
 
+<!-- Achievements Section -->
+  <section id="achievements" style="background: #f8fafc; padding: 100px 0;">
+    <div class="container">
+      <h2 class="section-title">My Achievements</h2>
+      <div class="row g-4 justify-content-center">
+        
+        <div class="col-6 col-md-3">
+          <div class="achievement-card" style="background:#fef3c7;">
+            <h3 style="color:#f59e0b;">10+</h3>
+            <p style="color:#b45309;">Projects</p>
+          </div>
+        </div>
+        
+        <div class="col-6 col-md-3">
+          <div class="achievement-card" style="background:#ecfdf5;">
+            <h3 style="color:#10b981;">5+</h3>
+            <p style="color:#047857;">Power BI Dashboards</p>
+          </div>
+        </div>
+        
+        <div class="col-6 col-md-3">
+          <div class="achievement-card" style="background:#eff6ff;">
+            <h3 style="color:#3b82f6;">50+</h3>
+            <p style="color:#1d4ed8;">DAX Measures</p>
+          </div>
+        </div>
+        
+        <div class="col-6 col-md-3">
+          <div class="achievement-card" style="background:#fdf2f8;">
+            <h3 style="color:#ec4899;">10+</h3>
+            <p style="color:#be185d;">Dataset Analyzed</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- Skills Section -->
   <section id="skills">
     <div class="container">
       <h2 class="section-title">Skills</h2>
@@ -401,13 +588,14 @@
     </div>
   </section>
 
+<!-- AI Tools Section -->
   <section id="ai-tools">
     <div class="container">
       <h2 class="section-title">AI Tools</h2>
       <div class="row g-4 justify-content-center">
 
         <div class="col-md-3">
-          <div class="skill-card" style="background:#fef3c7; border-top:5px solid #f59e0b; color:#f59e0b;">
+          <div class="skill-card" style="background:#fef3c7; color:#f59e0b;">
             <div class="text-center">
               <i class="fas fa-robot" style="color:#f59e0b;"></i>
               <h4 style="color:#f59e0b;">ChatGPT</h4>
@@ -422,7 +610,7 @@
         </div>
 
         <div class="col-md-3">
-          <div class="skill-card" style="background:#ecfdf5; border-top:5px solid #10b981; color:#10b981;">
+          <div class="skill-card" style="background:#ecfdf5; color:#10b981;">
             <div class="text-center">
               <i class="fas fa-brain" style="color:#10b981;"></i>
               <h4 style="color:#10b981;">Google Gemini</h4>
@@ -437,7 +625,7 @@
         </div>
 
         <div class="col-md-3">
-          <div class="skill-card" style="background:#eff6ff; border-top:5px solid #3b82f6; color:#3b82f6;">
+          <div class="skill-card" style="background:#eff6ff; color:#3b82f6;">
             <div class="text-center">
               <i class="fas fa-microchip" style="color:#3b82f6;"></i>
               <h4 style="color:#3b82f6;">Microsoft Copilot</h4>
@@ -452,7 +640,7 @@
         </div>
         
         <div class="col-md-3">
-          <div class="skill-card" style="background:#fdf2f8; border-top:5px solid #ec4899; color:#ec4899;">
+          <div class="skill-card" style="background:#fdf2f8; color:#ec4899;">
             <div class="text-center">
               <i class="fas fa-wand-magic-sparkles" style="color:#ec4899;"></i>
               <h4 style="color:#ec4899;">Claude AI</h4>
@@ -470,87 +658,72 @@
     </div>
   </section>
 
+<!-- Education Section -->
   <section id="education">
     <div class="container">
       <h2 class="section-title">Education</h2>
 
       <div class="edu-box mca">
         <h4>Master of Computer Applications (MCA)</h4>
-        <p>University Name :- Indira Gandhi University,Rewari,Haryana </p>
-        <p>Session :- 2023 - 2025 </p>
+            <p class="mb-1 text-muted"><i class="fas fa-university me-2"></i>Indira Gandhi University, Rewari, Haryana</p>
+            <p class="mb-0 text-dark font-monospace small"><i class="fas fa-calendar me-2"></i>2023 - 2025</p>
       </div>
 
       <div class="edu-box bsc-cs">
         <h4>B.Sc Computer Science</h4>
-        <p>College Name :- GCW Gurawara,Rewari,Haryana </p>
-        <p>University Name :- Indira Gandhi University,Rewari,Haryana </p>
-        <p>Session :- 2018 - 2021</p>
+            <p class="mb-1 text-muted"><i class="fas fa-university me-2"></i>GCW Gurawara | Indira Gandhi University</p>
+            <p class="mb-0 text-dark font-monospace small"><i class="fas fa-calendar me-2"></i>2018 - 2021</p>
       </div>
-
+      <div class="col-md-6">
+        <h5 class="mb-4 text-uppercase tracking-wider" style="font-weight:700; color:var(--text-muted);">Certifications</h5>
       <div class="edu-box data-analyst">
         <h4>Data Analyst</h4>
-        <p>Institute Name :- Zillionsoftech,Rewari,Haryana </p>
-        <p>Year :- 2026 </p>
+            <p class="mb-1 text-muted"><i class="fas fa-award me-2"></i>Zillionsoftech, Rewari, Haryana</p>
+            <p class="mb-0 text-dark font-monospace small"><i class="fas fa-calendar me-2"></i>2026</p>
       </div>
     </div>
   </section>
 
+<!-- Projects Section -->
   <section id="projects">
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="row g-4">
 
-        <!-- <div class="col-md-4">
+        <div class="col-md-4">
           <div class="project-card p-car-sales">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" alt="Car Sales Dashboard">
+            <img src="images/Sales.PNG" alt="Europe Sales Data Analysis Dashboard">
             <div class="project-content">
-              <h4>Car Sales Data Analysis</h4>
-              <p>Created interactive Excel dashboards and reports for car sales analysis and business insights.</p>
+              <h4>Europe Sales Data Analysis</h4>
+                <a href="https://github.com/jyotisharma-cyber/Europe-Sales-Data-Analysis" target="_blank" class="btn btn-outline-dark btn-sm flex-grow-1"><i class="fab fa-github me-1"></i> Code</a>
+                <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-primary btn-sm flex-grow-1"><i class="fab fa-linkedin me-1"></i> LinkedIn Post</a>
+              <p>
+                Developed an interactive Europe Sales Data Analysis Dashboard using Microsoft Excel
+                to analyze revenue, profit, cost, unit sales, and shipping performance across
+                different countries and product categories.
+              </p>
+              <ul>
+                <li>Revenue, Profit & Cost KPI Tracking</li>
+                <li>Country-wise Sales Performance Analysis</li>
+                <li>Product Category Profit Margin Insights</li>
+                <li>Interactive Slicers and Dynamic Reporting</li>
+              </ul>
             </div>
           </div>
-        </div> -->
-
-<div class="col-md-4">
-  <div class="project-card p-car-sales">
-    <img src="images/Sales.PNG" alt="Europe Sales Data Analysis Dashboard">
-    <div class="project-content">
-      <h4>Europe Sales Data Analysis</h4>
-
-      <a href="https://github.com/jyotisharma-cyber/Europe-Sales-Data-Analysis" target="_blank" class="btn btn-primary btn-sm my-2">
-        View Project
-      </a>
-
-      <p>
-        Developed an interactive Europe Sales Data Analysis Dashboard using Microsoft Excel
-        to analyze revenue, profit, cost, unit sales, and shipping performance across
-        different countries and product categories. The dashboard provides actionable
-        insights through KPIs, maps, charts, and dynamic filters for business decision-making.
-      </p>
-
-      <ul>
-        <li>Revenue, Profit & Cost KPI Tracking</li>
-        <li>Country-wise Sales Performance Analysis</li>
-        <li>Product Category Profit Margin Insights</li>
-        <li>Shipping Days & Order Priority Analysis</li>
-        <li>Interactive Slicers and Dynamic Reporting</li>
-      </ul>
-    </div>
-  </div>
-</div>
+        </div>
 
         <div class="col-md-4">
           <div class="project-card p-road-accident">
             <img src="images/Road-Accident.PNG" alt="Road Accident Dashboard">
             <div class="project-content">
               <h4>Road Accident Data Analysis</h4>
-              <a href="https://github.com/jyotisharma-cyber/Road-Accident" target="_blank" class="btn btn-primary btn-sm my-2">View Project</a>
-              <p>        Developed a Road Accident Analysis Dashboard using Excel and Power BI to identify accident patterns,
-        casualty trends, vehicle involvement, and high-risk locations for data-driven decision-making.</p>
+                <a href="https://github.com/jyotisharma-cyber/Road-Accident" target="_blank" class="btn btn-outline-dark btn-sm flex-grow-1"><i class="fab fa-github me-1"></i> Code</a>
+                <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-primary btn-sm flex-grow-1"><i class="fab fa-linkedin me-1"></i> LinkedIn Post</a>
+              <p>Developed a Road Accident Analysis Dashboard using Excel and Power BI to identify accident patterns, casualty trends, vehicle involvement, and high-risk locations.</p>
               <ul>
                 <li>Accident Severity Analysis</li>
                 <li>Casualty & Fatality Insights</li>
                 <li>Vehicle Type-wise Accident Trends</li>
-                <li>Location & Road Condition Analysis</li>
                 <li>Interactive Filters & KPI Monitoring</li>
               </ul>
             </div>
@@ -562,7 +735,8 @@
             <img src="images/Power Bi Dashboard-Sales.PNG" alt="Power BI Dashboard">
             <div class="project-content">
               <h4>Power BI Sales Dashboard</h4>
-              <a href="https://github.com/jyotisharma-cyber/Power-Bi-Project-Sales" target="_blank" class="btn btn-primary btn-sm my-2">View Project</a>
+                <a href="https://github.com/jyotisharma-cyber/Power-Bi-Project-Sales" target="_blank" class="btn btn-outline-dark btn-sm flex-grow-1"><i class="fab fa-github me-1"></i> Code</a>
+                <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-primary btn-sm flex-grow-1"><i class="fab fa-linkedin me-1"></i> LinkedIn Post</a>
               <p>Designed an interactive Power BI dashboard with KPIs, charts, slicers, and business insights.</p>
               <ul>
                 <li>Sales KPIs</li>
@@ -579,13 +753,13 @@
             <img src="images/HR-Analytics.PNG" alt="HR Analytics">
             <div class="project-content">
               <h4>HR Analytics Dashboard</h4>
-              <a href="https://github.com/jyotisharma-cyber/HR-ANALYTICS" target="_blank" class="btn btn-primary btn-sm my-2">View Project</a>
+                <a href="https://github.com/jyotisharma-cyber/HR-ANALYTICS" target="_blank" class="btn btn-outline-dark btn-sm flex-grow-1"><i class="fab fa-github me-1"></i> Code</a>
+                <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-primary btn-sm flex-grow-1"><i class="fab fa-linkedin me-1"></i> LinkedIn Post</a>
               <p>Built an HR analytics dashboard to analyze employee attrition, salary trends, department performance, and workforce insights using Power BI.</p>
               <ul>
                 <li>Employee Attrition Analysis</li>
                 <li>Department-wise Performance Insights</li>
                 <li>Job Satisfaction Analysis</li>
-                <li>Interactive Slicers & Filters</li>
                 <li>HR KPI Monitoring</li>
               </ul>
             </div>
@@ -597,13 +771,13 @@
             <img src="images/Finance.PNG" alt="Finance Dashboard">
             <div class="project-content">
               <h4>Finance Dashboard</h4>
-              <a href="https://github.com/jyotisharma-cyber/Finance" target="_blank" class="btn btn-primary btn-sm my-2"> View Project </a>
-              <p> Developed an interactive Finance Dashboard using Power BI and Excel to monitor revenue, expenses, profit margins, budget performance, and key financial metrics for better business decision-making. </p>
+                <a href="https://github.com/jyotisharma-cyber/Finance" target="_blank" class="btn btn-outline-dark btn-sm flex-grow-1"><i class="fab fa-github me-1"></i> Code</a>
+                <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-primary btn-sm flex-grow-1"><i class="fab fa-linkedin me-1"></i> LinkedIn Post</a>
+               <p> Developed an interactive Finance Dashboard using Power BI and Excel to monitor revenue, expenses, profit margins, budget performance, and key financial metrics. </p>
               <ul> 
                 <li>Revenue & Expense Analysis</li> 
                 <li>Profit Margin Tracking</li> 
                 <li>Budget vs Actual Performance</li>
-                <li>Financial KPI Monitoring</li> 
                 <li>Interactive Filters & Visualizations</li> 
               </ul>
             </div>
@@ -615,15 +789,13 @@
             <img src="images/E-Commerce.PNG" alt="E-Commerce Dashboard">
             <div class="project-content">
               <h4>E-Commerce Dashboard</h4>
-              <a href="https://github.com/jyotisharma-cyber/E-Commerce-Dashboard" target="_blank" class="btn btn-primary btn-sm my-2"> View Project </a>
-              <p>
-                 Built an interactive E-Commerce Dashboard using Power BI and Excel to analyze sales performance, customer behavior, product profitability, and regional trends, enabling data-driven business decisions. 
-              </p>
+                <a href="https://github.com/jyotisharma-cyber/E-Commerce-Dashboard" target="_blank" class="btn btn-outline-dark btn-sm flex-grow-1"><i class="fab fa-github me-1"></i> Code</a>
+                <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-primary btn-sm flex-grow-1"><i class="fab fa-linkedin me-1"></i> LinkedIn Post</a>
+              <p>Built an interactive E-Commerce Dashboard using Power BI and Excel to analyze sales performance, customer behavior, product profitability, and regional trends.</p>
               <ul> 
                 <li>Sales & Revenue Analysis</li> 
                 <li>Customer Segmentation Insights</li> 
                 <li>Product Performance Tracking</li> 
-                <li>Region-wise Sales Trends</li> 
                 <li>Interactive Filters & KPI Monitoring</li> 
               </ul>
             </div>
@@ -635,13 +807,13 @@
             <img src="images/Coaching Institute Dashboard.PNG" alt="Coaching Institute Dashboard">
             <div class="project-content">
               <h4>Coaching Institute Dashboard</h4>
-              <a href="https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard" target="_blank" class="btn btn-primary btn-sm my-2">View Project</a>
+                <a href="https://github.com/jyotisharma-cyber/Coaching-Institute-Dashboard" target="_blank" class="btn btn-outline-dark btn-sm flex-grow-1"><i class="fab fa-github me-1"></i> Code</a>
+                <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-primary btn-sm flex-grow-1"><i class="fab fa-linkedin me-1"></i> LinkedIn Post</a>
               <p>Built a dashboard to monitor student admissions, fee collection, attendance, and faculty performance using Power BI and Excel.</p>
               <ul>
                 <li>Student Admission Analysis</li>
                 <li>Fee Collection & Revenue Tracking</li>
                 <li>Attendance Monitoring</li>
-                <li>Faculty Performance Evaluation</li>
                 <li>Interactive Filters & KPI Dashboard</li>
               </ul>
             </div>
@@ -673,36 +845,17 @@
             </div>
           </div>
         </div>
-<!-- 
-        <div class="col-md-4">
-          <div class="project-card p-python-analytics">
-            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Python Analytics">
-            <div class="project-content">
-              <h4>Python Analytics Project</h4>
-              <p>Used Python, Pandas, and NumPy libraries for data cleaning, analysis, and visualization.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="project-card p-streamlit-app">
-            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Streamlit App">
-            <div class="project-content">
-              <h4>Streamlit Analytics App</h4>
-              <p>Built an interactive Streamlit analytics app for dashboard reporting and data visualization.</p>
-            </div>
-          </div>
-        </div> -->
 
       </div>
     </div>
   </section>
 
+<!-- Contact Section -->
   <section id="contact">
     <div class="container">
       <h2 class="section-title">Contact Me</h2>
       <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
           <div class="contact-box">
             <form id="contactForm">
               <div class="mb-3">
@@ -714,13 +867,13 @@
               <div class="mb-3">
                 <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="submit" class="btn btn-primary px-4 py-2" style="border-radius:10px;">Send Message</button>
             </form>
 
             <hr class="my-4">
 
             <div class="contact-info">
-              <h4 class="mb-3">Contact Information</h4>
+              <h4 class="mb-3" style="font-weight:700;">Contact Information</h4>
               <p><i class="fa-solid fa-envelope"></i> Email: sharmajyt0311@gmail.com</p>
               <p><i class="fa-solid fa-phone"></i> Phone: 9350425542</p>
               <p><i class="fa-solid fa-location-dot"></i> Location: Rewari, Haryana, India</p>
